@@ -16,19 +16,21 @@ app.use(
 );
 
 app.use(express.json());
+//arquivos estaticos
+app.use(express.static("public"));
 
-var checkAuth = function (req, res, next) {
-  req.authStatus = true;
+// var checkAuth = function (req, res, next) {
+//   req.authStatus = true;
 
-  if (req.authStatus) {
-    console.log("Está logado, pode continuar");
-    next();
-  } else {
-    console.log("Não está logado, faça o login para continuar!");
-  }
-};
+//   if (req.authStatus) {
+//     console.log("Está logado, pode continuar");
+//     next();
+//   } else {
+//     console.log("Não está logado, faça o login para continuar!");
+//   }
+// };
 
-app.use(checkAuth);
+// app.use(checkAuth);
 
 app.use("/users", users);
 

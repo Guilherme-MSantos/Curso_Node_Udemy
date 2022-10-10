@@ -1,0 +1,13 @@
+p,
+h1,
+h2,
+h3 {
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+}
+body {
+  background-color: black;
+}
